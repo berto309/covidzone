@@ -102,11 +102,77 @@ body {
   border: 2px solid;
 }
 
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fade-out 300ms ease-in-out forwards;
+}
+
 .landing {
   background-image: url("/dist/images/hero-background.svg");
 }
 
-.header {
+.landing.open .header__toggle > span:first-child {
+  transform: rotate(45deg);
+}
+
+.landing.open .header__toggle > span:nth-child(2) {
+  opacity: 0;
+}
+
+.landing.open .header__toggle > span:last-child {
+  transform: rotate(-45deg);
+}
+
+.landing .overlay {
+  position: fixed;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  top: 4.125rem;
+  bottom: 0;
+  background-image: linear-gradient(#B4285F, transparent);
+}
+
+.landing .overlay.fade-in .overlay {
+  display: block;
+}
+
+.landing .overlay.fade-in.fade-out .overlay {
+  display: none;
+}
+
+.landing .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,33 +180,56 @@ body {
   background-image: url("/dist/images/hero-background.svg");
 }
 
-.header__logo img {
+.landing .header__logo img {
   width: 9.8125rem;
   height: 3.375rem;
 }
 
-.header__menu > span {
+.landing .header__toggle > span {
   display: block;
   width: 26px;
   height: 2px;
   background-color: #ffffff;
+  transition: all 300ms ease-in-out;
   transform-origin: 6px 1px;
 }
 
-.header__menu > span:not(:last-child) {
+.landing .header__toggle > span:not(:last-child) {
   margin-bottom: 2.8px;
 }
 
-.header__nav a {
+.landing .header__menu {
+  background-color: #ffffff;
+  padding: 2.5rem 0;
+}
+
+.landing .header__menu a {
+  color: #B4285F;
+  padding: .625rem;
+}
+
+.landing .header__nav a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.header__nav a:not(:last-child) {
+@media (min-width: 64em) {
+  .landing .header__nav a a:nth-child(5) {
+    margin-right: 11.0625rem;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .landing .header__nav {
+    flex-direction: column;
+  }
+}
+
+.landing .header__nav a:not(:last-child) {
   margin-right: 28px;
 }
 
-.header__actions a:not(:last-child) {
+.landing .header__actions a:not(:last-child) {
   margin-right: 32px;
   text-decoration: none;
 }
