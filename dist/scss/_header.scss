@@ -1,0 +1,123 @@
+.landing{
+background-image: url('/dist/images/hero-background.svg');
+// background
+}
+
+
+.header{
+   
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top:0.6rem;
+background-image: url('/dist/images/hero-background.svg');
+
+&__logo{
+   
+   img{
+      width: 9.8125rem;
+      height: 3.375rem;
+   }
+} 
+
+//tablet 62em desktop 87em
+&__menu{
+// mobile
+   // @media(min-width:43.75em){
+   //    display: none;
+   // }
+   
+   >span{
+      display: block;
+      width: 26px;
+      height: 2px;
+      background-color: $white;
+      transform-origin: 6px 1px ;
+      &:not(:last-child){
+         margin-bottom: 2.8px;
+        
+      }
+
+      
+   }
+
+  
+
+
+}
+
+&__nav{
+
+   a{
+      color:$white;
+    text-decoration: none;
+   }
+
+a:not(:last-child){
+   margin-right: 28px;
+   
+}
+
+}
+
+&__actions{
+
+  a:not(:last-child) {
+    margin-right: 32px;
+    text-decoration: none;
+  
+}
+
+
+// .button{
+//    display: inline-block;
+//    padding: 0.6rem 1.75rem;
+//    border-radius: 10px;
+//    cursor:pointer;
+//    outline: none;
+//    border: 2px solid;
+  
+     
+// }
+
+}
+
+
+
+
+//  @media (min-width:(39.9375em)){
+//    //       padding-right: 0px;
+//    //  padding-left:0px;
+//     }
+
+
+}
+
+// .overlay{
+//    position: fixed;
+//    left:0;
+//    right: 0;
+//    top: 4.125rem;
+//    bottom: 0;
+//    // background-color: $black;
+//    background-image: linear-gradient($wine,transparent);
+
+// }
+
+
+// // hamburger menu open styles
+//  &.open{
+     
+//       >span:first-child{
+//          transform: rotate(45deg);
+//       }
+      
+//       >span:nth-child(2){
+//          opacity: 0;
+//       }
+
+//       >span:last-child{
+//          transform: rotate(-45deg);
+//       }
+
+//    }

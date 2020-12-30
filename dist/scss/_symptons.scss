@@ -1,0 +1,113 @@
+
+
+.symptons{
+     text-align: center;
+     padding-top: 1.625rem;
+     
+    // padding-bottom: 3.125rem;
+    &__intro{
+
+    // padding-bottom: 3.25rem;
+    margin-bottom: 4rem;
+    @include breakpoint-up(large){
+    padding-right: 12rem;
+    text-align: center;
+
+    p{padding-left: 14%;}
+    }
+    
+}
+    // max-width: 55.9375rem;
+    // max-width: 65.9375rem;
+    // font-size: 1.25rem;
+
+    @include breakpoint-up(large){
+    // max-width: 69rem;
+    font-size: 1.5625rem;
+    }
+
+    //     }
+    // }
+
+    &__grid{
+        padding-left: 0;
+       display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.875rem;
+            
+        @include breakpoint-up(medium){
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include breakpoint-up(large){
+            grid-template-columns: 3fr 1fr;
+        }
+
+        
+    }
+
+    &__inner-grid{
+
+        div.sympton{
+          @include breakpoint-up(large){ 
+               display: grid; grid-template-columns: 1fr 1fr 2fr;
+               :last-child{
+                       width: 152%;
+    font-size: 0.99rem;
+               }
+            }
+        }
+        // display: flex;
+        padding-left: 0;
+        display: grid;
+
+             grid-template-columns: 1fr;
+        @include breakpoint-up(large){
+            padding-top:4.125rem;
+            p{
+                margin-top: 0;
+                padding-right: 28px;
+            }
+            
+        gap: 6rem;
+            
+        @include breakpoint-up(medium){
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        @include breakpoint-up(large){
+            grid-template-columns: 1fr 1fr 2fr;
+        }
+        }
+
+    .inner-grid-list{
+        // grid-template-columns: 1fr;
+        // gap: 1.875rem;
+            
+        // @include breakpoint-up(medium){
+        //     grid-template-columns: repeat(3,1fr);
+        // }
+
+        // @include breakpoint-up(large){
+        //     grid-template-columns: 2fr 1fr;
+        // }
+    }
+    }
+
+
+
+
+    &__image{
+        img{
+            @include breakpoint-down(medium){
+                width: 76%;
+            }
+        }
+    }
+
+    // &__text{
+
+    // }
+}
+
+
