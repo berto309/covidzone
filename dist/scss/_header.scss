@@ -1,5 +1,5 @@
 .landing{
-background-image: url('/dist/images/hero-background.svg');
+background-image: url('../images/hero-background.svg');
 // background
 
 &.open{
@@ -60,7 +60,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding-top:0.6rem;
-background-image: url('/dist/images/hero-background.svg');
+// background-image: url('/dist/images/hero-background.svg');
 
 &__logo{
    

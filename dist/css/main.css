@@ -139,7 +139,7 @@ body {
 }
 
 .landing {
-  background-image: url("/dist/images/hero-background.svg");
+  background-image: url("../images/hero-background.svg");
 }
 
 .landing.open .header__toggle > span:first-child {
@@ -177,7 +177,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 0.6rem;
-  background-image: url("/dist/images/hero-background.svg");
 }
 
 .landing .header__logo img {
@@ -408,7 +407,7 @@ body {
 }
 
 .bg-prevention {
-  background-image: url("/dist/images/prevention.svg");
+  background-image: url("../images/prevention.svg");
 }
 
 .symptons {
@@ -591,7 +590,11 @@ body {
 }
 
 .bg-products {
-  background-image: url("/dist/images/products.svg");
+  background-image: url("../images/products.svg");
+}
+
+.bg-footer {
+  background-image: url("../images/footer.svg");
 }
 
 .footer__grid {
@@ -694,9 +697,5 @@ body {
 .footer__form button {
   border-radius: 0 13px 13px 0;
   border: none;
-}
-
-.bg-footer {
-  background-image: url("/dist/images/footer.svg");
 }
 /*# sourceMappingURL=main.css.map */
